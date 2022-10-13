@@ -32,4 +32,17 @@ router.post('/:index', (req, res) => {
     res.send('products[re.params.index]')
 })
     //set up 'edit' route
-router.g
+router.get('/:index/edit', (req,res) => {
+    res.send('<form>edit product</form>')
+})
+
+    //set-up "update" route
+router.get('/:index', (req, res) => {
+    res.send('updating a product at index!(in db')
+})
+    //set-up "destroy" route
+router.get('/:index', (req, res) =>{
+    res.send('deleting a product at index!(in db')
+})
+
+module.exports = router

@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/ronaldwilbourne/MbogaShop#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "express-react-views": "^0.11.0",
+    "moongose": "^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
