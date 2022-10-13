@@ -1,15 +1,17 @@
 //set up data
 const products = [
-   {name:'Afya_drink',
+   {image:'https://images.yaoota.com/1-jZUZOvnuZ48wory0D3FP5SD80=/trim/yaootaweb-production-ke/media/crawledproductimages/ff285ebd19df07b1c3f16b1a2c5612dca23b5273.jpg',
+    name:'Afya_drink',
    size:'small',
    description:'good cold drink to refresh your thirst'
    
 },
-   {name:'Ajab',
+   {image: 'https://www.159onlineshop.com/uploads/product_image/product_1058_1.jpg',
+    name:'Ajab',
    size:'large',
    description:'cookingFlour'
 },
-   {image: 'https://mybigorder.com/public/uploads/all/4xj9MBIk9FNZ8VNIBBa2oTk7RBBB7slVnSEAR2lT.png'
+   {image: 'https://mybigorder.com/public/uploads/all/4xj9MBIk9FNZ8VNIBBa2oTk7RBBB7slVnSEAR2lT.png',
     name:'Amara',
    size:'small',
    description:'lotion'

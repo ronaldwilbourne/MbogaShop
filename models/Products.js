@@ -1,113 +1,20 @@
-//set up data
- const products = [
-    {name:'Afya_drink',
-    size:'small',
-    description:'good cold drink to refresh your thirst'
-},
-    {name:'Ajab',
-    size:'large',
-    description:'cookingFlour'
-},
-    {name:'Amara',
-    size:'small',
-    description:'lotion'
+//load mongoose
+const mongoose = require('mongoose')
+const products = require('./seed')
 
-},
-    {name:'Arimis',
-    size:'small',
-    description:'jelly'
-},  
-    {name:'Asis',
-    size:'medium',
-    description:'tea-leaves'
-},
-    {name:'Blueband',
-    size:'medium',
-    description:'magarine'
-},
-    {name:'bulb',
-    size:'64 watts',
-    description:'light_bulb'
-},
-    {name:'Colgate',
-    size:'medium',
-    deccription:'tooth_paste'
-},
-    {name:'Dawn',
-    size:'small',
-    description:'toilet_paper'
-},
-    {name:'Delamare',
-    Size:'medium',
-    description:'yoghurt'
-},
-    {name:'Downy',
-    size:'small',
-    description:'washing_powder'
-},
-    {name:'energy',
-    size:'small',
-    description:'biscuits'
-},
-    {name:'freshFry',
-    size:'small',
-    description:'cooking_oil'
-},
-    {name:'Geisha',
-    size:'small',
-    description:'bathing_soap'
-},
-    {name:'Peas',
-    Size:'medium',
-    description:'green'
-},
-    {name:'Indomie',
-    size:'small',
-    description:'beef'
-},
-    {name:'Indomie',
-    size:'small',
-    description:'chicken'
-},
-    {name:'Jik',
-    size:'small',
-    description:'colored'
-},
-    {name:'Kabras',
-    size:'medium',
-    description:'sugar'
-},
-    {name:'Kimbo',
-    size:'medium',
-    description:'cookingfat'
-},
-    {name:'kiwi',
-    size:'small',
-    description:'Shoepolish'
-},
-    {name:'Pin-pop',
-    size:'small',
-    description:'candy'
-},
-    {name:'Rosy',
-    size:'medium',
-    description:'toiletpaper'
-},
-    {name:'Sossi',
-    size:'small',
-    description:'beef'
-},
-    {name:'Sunlight',
-    size:'large',
-    description:'washing_powder'
-},
-    {name:'Wafers',
-    size:'medium',
-    description:'Cookies'
-},  
-    {name:'weetabix',
-    size:'small',
-    description:'kamoja'
-},
-]
+//add a shortcut to schema
+const schema = mongoose.Schema
+
+//create our schema
+const productSchema = new Schema({
+    image: {},
+    name:{type: String, required: true},
+    size: {type: String, required: true},
+    description: {type: String, required: true}
+})
+
+//create a Model from our Schema
+const Product = mongoose.model('Products', productSchema)
+
+//export our Model
 module.exports = products
